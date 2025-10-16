@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -62,15 +63,27 @@ const Navbar = () => {
           {/* Desktop */}
           <div className="hidden lg:contents w-full w-100%">
             {/* Logo */}
-            <div className="hidden lg:flex text-xl lg:text-2xl tracking-nav text-gray-900 font-normal  items-center font-outfit lg:mr-10 "><a href="/">OWNDAYS</a></div>
+            <div className="hidden lg:flex text-xl lg:text-2xl tracking-nav text-gray-900 font-normal  items-center font-outfit lg:mr-10 ">
+              <Link href="/">OWNDAYS</Link>
+            </div>
 
             {/* Menu List */}
             <ul className="hidden space-x-6 lg:flex">
-              <li className="flex items-center"><a href="/search-product" className="!text-gray-800 hover:!text-red font-normal">商品検索</a></li>
-              <li className="flex items-center"><a href="/brands" className="!text-gray-800 hover:!text-red font-normal">ブランド</a></li>
-              <li className="flex items-center"><a href="/lenses" className="!text-gray-800 hover:!text-red font-normal">レンズ</a></li>
-              <li className="flex items-center"><a href="/about" className="!text-gray-800 hover:!text-red font-normal">OWNDAYSについて</a></li>
-              <li className="flex items-center"><a href="/store-locator" className="!text-gray-800 hover:!text-red font-normal">店舗検索</a></li>
+              <li className="flex items-center">
+                <Link href="/search-product" className="!text-gray-800 hover:!text-red font-normal">商品検索</Link>
+              </li>
+              <li className="flex items-center">
+                <Link href="/brands" className="!text-gray-800 hover:!text-red font-normal">ブランド</Link>
+              </li>
+              <li className="flex items-center">
+                <Link href="/lenses" className="!text-gray-800 hover:!text-red font-normal">レンズ</Link>
+              </li>
+              <li className="flex items-center">
+                <Link href="/about" className="!text-gray-800 hover:!text-red font-normal">OWNDAYSについて</Link>
+              </li>
+              <li className="flex items-center">
+                <Link href="/store-locator" className="!text-gray-800 hover:!text-red font-normal">店舗検索</Link>
+              </li>
             </ul>
 
             {/* Profile */}
@@ -125,7 +138,9 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div className="flex text-xl lg:text-2xl tracking-nav text-gray-900 font-normal  items-center font-outfit lg:mr-10 "><a href="/">OWNDAYS</a></div>
+            <div className="flex text-xl lg:text-2xl tracking-nav text-gray-900 font-normal  items-center font-outfit lg:mr-10 ">
+              <Link href="/">OWNDAYS</Link>
+            </div>
 
             <div className="flex justify-center">
               <button className="cursor-pointer group ">
@@ -147,11 +162,11 @@ const Navbar = () => {
       <div className="border-1 border-b-gray-200 ">
         <div className="max-w-[1440px] mx-auto h-8 flex items-center w-full px-5 lg:px-10">
           <nav className="text-xs lg:text-sm">
-            <a href="/" className="!text-gray-400 hover:!text-gray-800 font-light">メガネのOWNDAYS トップ</a>
+            <Link href="/" className="!text-gray-400 hover:!text-gray-800 font-light">メガネのOWNDAYS トップ</Link>
             <span className="mx-2 text-gray-400 font-light">&gt;</span>
-            <a href="/top" className="!text-gray-400 hover:!text-gray-800 font-light">ニュース</a>
+            <Link href="/top" className="!text-gray-400 hover:!text-gray-800 font-light">ニュース</Link>
             <span className="mx-2 text-gray-400 font-light">&gt;</span>
-            <a href="/news" className="!text-gray-800 font-light">みんなメガネ割</a>
+            <Link href="/news" className="!text-gray-800 font-light">みんなメガネ割</Link>
           </nav>
         </div>
       </div>
@@ -288,57 +303,57 @@ const Navbar = () => {
                   <li className={`transform transition-all duration-300 ease-out delay-75 ${
                     !isSidebarAnimating ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
                   }`}>
-                    <a 
+                    <Link 
                       href="/search-product" 
                       className="flex items-center px-4 py-3 !text-gray-800 hover:bg-red hover:text-white hover:scale-105 rounded-lg transition-all duration-200"
                       onClick={closeSidebar}
                     >
                       商品検索
-                    </a>
+                    </Link>
                   </li>
                   <li className={`transform transition-all duration-300 ease-out delay-100 ${
                     !isSidebarAnimating ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
                   }`}>
-                    <a 
+                    <Link 
                       href="/brands" 
                       className="flex items-center px-4 py-3 !text-gray-800 hover:bg-red hover:text-white hover:scale-105 rounded-lg transition-all duration-200"
                       onClick={closeSidebar}
                     >
                       ブランド
-                    </a>
+                    </Link>
                   </li>
                   <li className={`transform transition-all duration-300 ease-out delay-150 ${
                     !isSidebarAnimating ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
                   }`}>
-                    <a 
+                    <Link 
                       href="/lenses" 
                       className="flex items-center px-4 py-3 !text-gray-800 hover:bg-red hover:text-white hover:scale-105 rounded-lg transition-all duration-200"
                       onClick={closeSidebar}
                     >
                       レンズ
-                    </a>
+                    </Link>
                   </li>
                   <li className={`transform transition-all duration-300 ease-out delay-200 ${
                     !isSidebarAnimating ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
                   }`}>
-                    <a 
+                    <Link 
                       href="/about" 
                       className="flex items-center px-4 py-3 !text-gray-800 hover:bg-red hover:text-white hover:scale-105 rounded-lg transition-all duration-200"
                       onClick={closeSidebar}
                     >
                       OWNDAYSについて
-                    </a>
+                    </Link>
                   </li>
                   <li className={`transform transition-all duration-300 ease-out delay-250 ${
                     !isSidebarAnimating ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
                   }`}>
-                    <a 
+                    <Link 
                       href="/store-locator" 
                       className="flex items-center px-4 py-3 !text-gray-800 hover:bg-red hover:text-white hover:scale-105 rounded-lg transition-all duration-200"
                       onClick={closeSidebar}
                     >
                       店舗検索
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

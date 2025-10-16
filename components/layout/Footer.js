@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Footer = () => {
   return (
     <footer className="bg-gray-50 mt-auto">
@@ -16,9 +18,9 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-gray-900 mb-3">商品</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="/products" className="hover:text-gray-900">メガネフレーム</a></li>
-              <li><a href="/sunglasses" className="hover:text-gray-900">サングラス</a></li>
-              <li><a href="/lenses" className="hover:text-gray-900">レンズ</a></li>
+              <li><Link href="/products" className="hover:text-gray-900">メガネフレーム</Link></li>
+              <li><Link href="/sunglasses" className="hover:text-gray-900">サングラス</Link></li>
+              <li><Link href="/lenses" className="hover:text-gray-900">レンズ</Link></li>
             </ul>
           </div>
           
@@ -26,9 +28,9 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-gray-900 mb-3">サポート</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="/store-locator" className="hover:text-gray-900">店舗検索</a></li>
-              <li><a href="/contact" className="hover:text-gray-900">お問い合わせ</a></li>
-              <li><a href="/faq" className="hover:text-gray-900">よくある質問</a></li>
+              <li><Link href="/store-locator" className="hover:text-gray-900">店舗検索</Link></li>
+              <li><Link href="/contact" className="hover:text-gray-900">お問い合わせ</Link></li>
+              <li><Link href="/faq" className="hover:text-gray-900">よくある質問</Link></li>
             </ul>
           </div>
           
@@ -36,9 +38,9 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-gray-900 mb-3">会社情報</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="/about" className="hover:text-gray-900">OWNDAYSについて</a></li>
-              <li><a href="/news" className="hover:text-gray-900">ニュース</a></li>
-              <li><a href="/careers" className="hover:text-gray-900">採用情報</a></li>
+              <li><Link href="/about" className="hover:text-gray-900">OWNDAYSについて</Link></li>
+              <li><Link href="/news" className="hover:text-gray-900">ニュース</Link></li>
+              <li><Link href="/careers" className="hover:text-gray-900">採用情報</Link></li>
             </ul>
           </div>
         </div>
@@ -50,8 +52,8 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} OWNDAYS Co., Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="text-sm !text-gray-600 hover:text-gray-900">プライバシーポリシー</a>
-              <a href="/terms" className="text-sm !text-gray-600 hover:text-gray-900">利用規約</a>
+              <Link href="/privacy" className="text-sm !text-gray-600 hover:text-gray-900">プライバシーポリシー</Link>
+              <Link href="/terms" className="text-sm !text-gray-600 hover:text-gray-900">利用規約</Link>
             </div>
           </div>
         </div>

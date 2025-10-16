@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const ProductCard = ({ type, productName, productCode, productImg, isFavorite = false, bgColor = "#468A59", productPrice = 0 }) => {
 	
 	if (isFavorite) return (
@@ -15,7 +17,13 @@ const ProductCard = ({ type, productName, productCode, productImg, isFavorite = 
 			<h5 className="z-1 text-black text text-[1rem] tracking-[1px] font-medium">{productCode.toUpperCase()}</h5>
 			{/* Product Image */}
 			<div className="flex relative top-[-6%]">
-				<img src={productImg} className="w-full max-w-[357px]" />
+				<Image 
+					src={productImg} 
+					alt={`${productName} ${productCode}`}
+					width={357}
+					height={300}
+					className="w-full max-w-[357px]"
+				/>
 			</div>
 			{/* Product Price */}
 			<span className="flex text-black text-[1.375rem] font-semibold items-center relative top-[-12%]">{`¥${productPrice}`}<p className="text-[0.7rem] font-normal ml-1 mt-1">税込</p></span>
@@ -36,7 +44,13 @@ const ProductCard = ({ type, productName, productCode, productImg, isFavorite = 
 			<h5 className="z-1 text-black text text-[1rem] tracking-[1px] font-medium">{productCode.toUpperCase()}</h5>
 			{/* Product Image */}
 			<div className="flex relative top-[-6%]">
-				<img src={productImg} className="w-full max-w-[357px]" />
+				<Image 
+					src={productImg} 
+					alt={`${productName} ${productCode}`}
+					width={357}
+					height={300}
+					className="w-full max-w-[357px]"
+				/>
 			</div>
 		</div>
 	)

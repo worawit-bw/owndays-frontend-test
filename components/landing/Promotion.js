@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const Promotion = () => {
   return (
     <div className="container max-w-[1440px] mx-auto">
@@ -5,16 +7,34 @@ const Promotion = () => {
         {/* Infographic Header */}
         <div className="flex justify-between gap-7 lg:gap-10 mb-6 place-items-center">
           <div className="w-100% max-w-[349px] place-items-center ml-5 mt-5">
-            <img src="/assets/image/date_promo.png" alt="Promotion" className="w-full h-auto rounded-lg" />
+            <Image 
+              src="/assets/image/date_promo.png" 
+              alt="Promotion date" 
+              width={349}
+              height={200}
+              className="w-full h-auto rounded-lg" 
+            />
           </div>
           <div className="w-100% max-w-[592px] mr-5">
-            <img src="/assets/image/info.png" alt="Promotion" className="w-full h-auto rounded-lg" />
+            <Image 
+              src="/assets/image/info.png" 
+              alt="Promotion information" 
+              width={592}
+              height={300}
+              className="w-full h-auto rounded-lg" 
+            />
           </div> 
         </div>
 
         {/* By 2 Discount */}
         <div className="w-100% max-w-[381px] mt-15 mx-auto">
-          <img src="/assets/image/promo_buy2.png" alt="Promotion" className="w-full h-auto rounded-lg" />
+          <Image 
+            src="/assets/image/promo_buy2.png" 
+            alt="Buy 2 promotion" 
+            width={381}
+            height={200}
+            className="w-full h-auto rounded-lg" 
+          />
         </div>
 
         {/* Description */}
@@ -37,12 +57,24 @@ const Promotion = () => {
             </div>
 
             <div className="flex mt-8 mx-10 justify-between">
-              <img className="w-full max-w-[296px]" src="/assets/image/glass_2_plus.png" />
+              <Image 
+                src="/assets/image/glass_2_plus.png" 
+                alt="Two glasses"
+                width={296}
+                height={200}
+                className="w-full max-w-[296px]" 
+              />
 
               {/* Center Line */}
               <div className="h-[95px] relative">
                 <div className="w-[3px] h-full absolute top-0 left-0 bg-red" ></div>
-                <img src="/assets/image/arrow.png" className="relative top-1/2 left-1/2 transform -translate-x-[55%] -translate-y-1/2  w-[10px] h-[10px]"/>
+                <Image 
+                  src="/assets/image/arrow.png" 
+                  alt="Arrow"
+                  width={10}
+                  height={10}
+                  className="relative top-1/2 left-1/2 transform -translate-x-[55%] -translate-y-1/2"
+                />
               </div>
 
               <div className="flex flex-col text-black font-bold items-center">

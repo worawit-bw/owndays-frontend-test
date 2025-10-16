@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const BoxMessage = ({ message }) => {
   return (
     <div className="flex items-center justify-center px-7 py-2 bg-white border-2 border-black rounded-xl shadow-custom  box-shadow-custom  relative mx-auto">
@@ -9,8 +11,20 @@ const BoxMessage = ({ message }) => {
       </h1>
 
       {/* Arrow Text */}
-      <img src="/assets/image/white_arrow_box.png" className="absolute w-[15px] h-[35px] right-[11%] bottom-[-30%] z-1" />
-      <img src="/assets/image/black_arrow_box.png" className="absolute w-[23px] h-[53px] right-[6%] bottom-[-35%] z-0" />
+      <Image 
+        src="/assets/image/white_arrow_box.png" 
+        alt="White arrow" 
+        width={15} 
+        height={35} 
+        className="absolute right-[11%] bottom-[-30%] z-1" 
+      />
+      <Image 
+        src="/assets/image/black_arrow_box.png" 
+        alt="Black arrow" 
+        width={23} 
+        height={53} 
+        className="absolute right-[6%] bottom-[-35%] z-0" 
+      />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import ProductCard from "../card/ProductCard"
+import Image from 'next/image'
 
 const Collection = () => {
   return (
@@ -12,7 +13,13 @@ const Collection = () => {
               FAMILY
             </p>
 
-            <img src="/assets/image/family.png" className="absolute top-0 w-[70%] max-w-[600px] mt-[12%] left-[50%] transform -translate-x-1/2" />
+            <Image 
+              src="/assets/image/family.png" 
+              alt="Family illustration"
+              width={600}
+              height={400}
+              className="absolute top-0 w-[70%] max-w-[600px] mt-[12%] left-[50%] transform -translate-x-1/2" 
+            />
           </div>
 
           <div className="flex flex-col mt-[20%] w-full">
