@@ -9,7 +9,7 @@ const Landing = ({ children }) => {
       <Promotion />
       <Pickup />
       <Collection />
-      {/* <Option/> */}
+      <Option/>
     </div>
   );
 };

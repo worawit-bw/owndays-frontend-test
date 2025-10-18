@@ -2,11 +2,11 @@ import Image from 'next/image';
 
 const BoxMessage = ({ message, textColor }) => {
   return (
-    <div className="flex items-center justify-center px-7 py-2 bg-white border-2 border-black rounded-xl shadow-custom  box-shadow-custom  relative mx-auto">
+    <div className="flex w-[110px] sm:w-[130px] items-center justify-center px-7 py-0.5 sm:py-1 bg-white border-2 border-black rounded-lg shadow-custom  box-shadow-custom  relative mx-auto">
       {/* Background */}
-      <div className="w-full h-full bg-white z-1 absolute t-0 left-0 border-1 border-white rounded-xl"></div>
+      <div className="w-[105px] sm:w-[125px] h-full bg-white z-1 absolute t-0 left-0 border-1 border-white rounded-lg"></div>
       {/* Text */}
-      <h1 className={`text-[15px] font-bold ${textColor ? `text-${textColor}` : 'text-red'} tracking-wider tracking-3 leading-7 z-3 bg-white`}>
+      <h1 className={`text-[12.5px] sm:text-[15px] font-bold ${textColor ? `text-${textColor}` : 'text-red'} tracking-wider tracking-3 leading-7 z-3 bg-white`}>
         {message}
       </h1>
 

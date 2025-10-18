@@ -2,8 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/privacy": "pages/privacy.js",
-  "/terms": "pages/terms.js",
   "/": "pages/index.js",
+  "/search-products": "pages/search-products.js",
   "/store-locator": "pages/store-locator.js"
 }

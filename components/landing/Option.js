@@ -11,13 +11,13 @@ const Option = ({ icon, title, description }) => {
   ]  
 
   return (
-    <div className="flex flex-col items-center text-center w-full bg-[#F4F4F4] py-[140px] mt-[100px] relative">
-        <div className="absolute top-[-35px] left-1/2 transform -translate-x-1/2">
-          <p className="lg:text-[65px] font-bold text-red leading-[1] [text-shadow:_-2px_-2px_0_black,_2px_-2px_0_black,_-2px_2px_0_black,_2px_2px_0_black] tracking-[5px]">OPTION</p>
-          <p className="text-[21px] lg:text-[21px] text-black tracking-[2px] mt-2">おすすめオプションレンズ</p>
-        </div>
+    <div className="flex flex-col items-center text-center w-full bg-[#F4F4F4] py-[90px] md:py-[140px] mt-[100px] relative">
+      <div className="absolute top-[-20px] md:top-[-35px] left-1/2 transform -translate-x-1/2">
+        <p className="text-[40px] md:text-[65px] font-bold text-red leading-[1] [text-shadow:_-2px_-2px_0_black,_2px_-2px_0_black,_-2px_2px_0_black,_2px_2px_0_black] tracking-[5px]">OPTION</p>
+        <p className="text-[12px] md:text-[21px] text-black tracking-[2px] mt-2">おすすめオプションレンズ</p>
+      </div>
 
-      <div className="max-w-[1112px] w-full h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mx-auto">
+      <div className="w-full max-w-[1440px] h-full grid grid-cols-1 place-items-center md:place-items-stretch sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-2 mx-auto px-15 lg:px-20 xl:px-41">
         {mock.map((item, index) => (
           <DescriptionCard 
             key={index}
