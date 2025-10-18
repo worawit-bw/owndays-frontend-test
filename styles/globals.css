@@ -15,6 +15,14 @@
   --font-mizolet: mizolet, sans-serif;
   --font-yu-gothic: yu-gothic-pr6n, sans-serif;
 
+  /* Breakpoints */
+  --breakpoint-xs: 390px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
   /* Text */
   --tracking-nav: 8px;
 
@@ -55,6 +63,15 @@ nav ul li a {
 /* Force Outfit font to load first */
 .font-outfit {
   font-family: "Outfit", sans-serif !important;
+}
+
+/* Adobe Typekit Fonts */
+.font-mizolet {
+  font-family: "mizolet", "Outfit", sans-serif !important;
+}
+
+.font-yu-gothic {
+  font-family: "yu-gothic-pr6n", "Noto Sans JP", sans-serif !important;
 }
 
 .box-shadow-custom {

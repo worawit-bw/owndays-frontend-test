@@ -1,8 +1,9 @@
 {
   "/_app": "pages/_app.js",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
-  "/api/hello": "pages/api/hello.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/privacy": "pages/privacy.js",
+  "/terms": "pages/terms.js",
+  "/": "pages/index.js",
+  "/store-locator": "pages/store-locator.js"
 }

@@ -5,14 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: false
-      // ไม่มี screens = ไม่มี max-width จำกัด
-    },
     extend: {
       colors: {},
+      fontFamily: {
+        'outfit': ['Outfit', 'sans-serif'],
+        'mizolet': ['mizolet', 'Outfit', 'sans-serif'],
+        'yu-gothic': ['yu-gothic-pr6n', 'Noto Sans JP', 'sans-serif'],
+      },
     },
   },
   plugins: [],

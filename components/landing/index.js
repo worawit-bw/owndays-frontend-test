@@ -5,11 +5,11 @@ import Collection from './Collection';
 
 const Landing = ({ children }) => {
   return (
-    <div className="w-full flex flex-col justify-center mx-auto mt-[166px] mb-[144px]">
+    <div className="w-full flex flex-col justify-center mx-auto mt-[120px] sm:mt-[140px] mb-[144px] md:mt-[166px]">
       <Promotion />
       <Pickup />
       <Collection />
-      <Option/>
+      {/* <Option/> */}
     </div>
   );
 };

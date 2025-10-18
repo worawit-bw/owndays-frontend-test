@@ -70,7 +70,7 @@ const Navbar = () => {
             {/* Menu List */}
             <ul className="hidden space-x-6 lg:flex">
               <li className="flex items-center">
-                <Link href="/search-product" className="!text-gray-800 hover:!text-red font-normal">商品検索</Link>
+                <Link href="/search-products" className="!text-gray-800 hover:!text-red font-normal">商品検索</Link>
               </li>
               <li className="flex items-center">
                 <Link href="/brands" className="!text-gray-800 hover:!text-red font-normal">ブランド</Link>
@@ -272,7 +272,7 @@ const Navbar = () => {
         <>
           {/* Backdrop */}
           <div 
-            className={`fixed inset-0 bg-gray-100 z-[9998] lg:hidden transition-opacity duration-300 ease-out ${
+            className={`fixed inset-0 bg-[rgba(0,0,0,0.7)] z-[9998] lg:hidden transition-opacity duration-300 ease-out ${
               isSidebarOpen ? 'bg-opacity-50 opacity-100' : 'bg-opacity-0 opacity-0'
             }`}
             onClick={closeSidebar}
@@ -304,7 +304,7 @@ const Navbar = () => {
                     !isSidebarAnimating ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
                   }`}>
                     <Link 
-                      href="/search-product" 
+                      href="/search-products" 
                       className="flex items-center px-4 py-3 !text-gray-800 hover:bg-red hover:text-white hover:scale-105 rounded-lg transition-all duration-200"
                       onClick={closeSidebar}
                     >
