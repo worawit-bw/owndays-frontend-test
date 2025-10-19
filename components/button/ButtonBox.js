@@ -8,7 +8,7 @@ const ButtonBox = ({
   return (
     <button
       onClick={onClick}
-      className={`group ${title ? 'max-w-[350px] md:max-w-[450px] p-[12px] pl-[21px] sm:px-[24px]' : 'max-w-[390px] px-[12px] sm:px-[24px]'} py-[13px] flex flex-wrap items-center justify-between bg-white border-2 border-black rounded-xl hover:bg-white transition-colors duration-200 cursor-pointer box-shadow-custom hover:!shadow-none`}
+      className={`group ${title ? 'max-w-[350px] md:max-w-[450px] p-[12px] pl-[21px] sm:px-[24px]' : 'max-w-[390px] px-[12px] sm:px-[24px]'} py-[13px] flex flex-wrap sm:flex-nowrap items-center justify-between bg-white border-2 border-black rounded-xl hover:bg-white transition-colors duration-200 cursor-pointer box-shadow-custom hover:!shadow-none`}
     >
       {title ?
         <div className="flex-1 flex-col px-0 md:px-3 py-3.5 md:py-4.5 text-left">

@@ -17,7 +17,7 @@ const Option = ({ icon, title, description }) => {
         <p className="text-[12px] md:text-[21px] text-black tracking-[2px] mt-2">おすすめオプションレンズ</p>
       </div>
 
-      <div className="w-full max-w-[1440px] h-full grid grid-cols-1 place-items-center md:place-items-stretch sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-2 mx-auto px-15 lg:px-20 xl:px-41">
+      <div className="w-full max-w-[1440px] h-full grid grid-cols-1 place-items-center md:place-items-stretch sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-2 mx-auto px-5 sm:px-20 xl:px-41">
         {mock.map((item, index) => (
           <DescriptionCard 
             key={index}

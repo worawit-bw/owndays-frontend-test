@@ -81,10 +81,10 @@ const Promotion = () => {
               {/* Horizontal */}
               <div className="flex md:hidden h-[9px] w-full md:h-[95px] relative md:w-[12px]">
                 <Image 
-                  src="/assets/image/vector.svg" 
+                  src="/assets/image/line_center_horizontal.png" 
                   alt="Arrow"
-                  width={20}
-                  height={95}
+                  width={200}
+                  height={10}
                   style={{width: '100%', height: '100%', objectFit: 'contain'}}
                 />
               </div>

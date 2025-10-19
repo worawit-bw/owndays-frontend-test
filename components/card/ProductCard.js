@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ButtonPrimary from '../button/ButtonPrimary';
 
-const ProductCard = ({ type, productName, productCode, productImg, isFavorite = false, bgColor = "#468A59", productPrice = 0 }) => {
+const ProductCard = ({ type, productName, productCode, productImg, isFavorite = false, bgColor = "#468A59", productPrice = 0, isAudio = false, isKids = false }) => {
 	
 	if (isFavorite) return (
 		<div className='flex flex-col items-center justify-center px-3 pt-3 pb-5 md:p-3'>
@@ -42,13 +42,7 @@ const ProductCard = ({ type, productName, productCode, productImg, isFavorite = 
 	)
 	
 	return (
-		<div className='flex flex-col items-center justify-center p-4 sm:p-6'>
-			{/* Product Type */}
-			<span className="text-white text-xs sm:text-sm lg:text-base bg-black py-2 sm:py-3 px-4 sm:px-6 font-semibold tracking-[1px] rounded-3xl">{type.toUpperCase()}</span>
-			{/* Product Name */}
-			<h1 className="z-1 text-black text-lg sm:text-xl lg:text-2xl tracking-[1px] font-semibold mt-4 sm:mt-5">{productName.toUpperCase()}</h1>
-			{/* Product Code */}
-			<h5 className="z-1 text-black text-sm sm:text-base lg:text-lg tracking-[1px] font-medium">{productCode.toUpperCase()}</h5>
+		<div className='flex flex-col items-center justify-center md:px-3 md:pt-3 pb-5 md:p-3 relative'>
 			{/* Product Image */}
 			<div className="flex relative -mt-2 sm:-mt-3">
 				<Image 
@@ -56,9 +50,35 @@ const ProductCard = ({ type, productName, productCode, productImg, isFavorite = 
 					alt={`${productName} ${productCode}`}
 					width={357}
 					height={300}
-					className="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-[300px]"
+					className="w-full max-w-[300px]"
 				/>
 			</div>
+			{/* Product Name */}
+			<h1 className="z-1 text-black text-[16px] tracking-[1px] font-semibold mb-1">{productName.toUpperCase()}</h1>
+			{/* Product Code */}
+			<h5 className="z-1 w-full truncate text-black text-center text-[12px] tracking-[1px] font-medium">{productCode.toUpperCase()}</h5>
+			{/* Product Price */}
+			<span className="flex relative text-black text-lg sm:text-xl lg:text-2xl font-semibold items-center mt-3">{`¥${productPrice}`}<p className="text-xs sm:text-sm font-normal ml-1 mt-1">税込</p></span>
+
+			<div className="flex items-center mt-5 sm:mt-6">
+				<ButtonPrimary text="ONLINE STORE"/>
+			</div>
+
+			{isAudio && <Image 
+				src="/assets/image/audio_glasses.png" 
+				alt="Audio Icon"
+				width={70}
+				height={27}
+				className="absolute top-0 right-0 w-[70px] h-[27px]"
+			/>}
+
+			{isKids && <Image 
+				src="/assets/image/for_kids.png" 
+				alt="Audio Icon"
+				width={70}
+				height={27}
+				className="absolute top-0 right-0 w-[70px] h-[27px]"
+			/>}
 		</div>
 	)
 }

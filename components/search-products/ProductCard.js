@@ -146,12 +146,12 @@ const ProductCard = ({ product, viewMode }) => {
 
   // Grid view
   return (
-    <div className="bg-white border border-gray-100 rounded-lg overflow-hidden hover:border-gray-200 transition-all duration-300 group">
+    <div className="bg-white border border-gray-100 rounded-lg overflow-hidden hover:border-gray-200 transition-all duration-300 group min-w-[300px] sm:min-w-[350px] w-full">
       {/* Product Image */}
       <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
-        <div className="text-gray-400 text-center">
-          <div className="text-lg font-light">{product.brand}</div>
-          <div className="text-sm">{product.name}</div>
+        <div className="text-gray-400 text-center px-4">
+          <div className="text-base sm:text-lg font-light">{product.brand}</div>
+          <div className="text-xs sm:text-sm">{product.name}</div>
         </div>
         
         {/* Badges */}
@@ -189,12 +189,12 @@ const ProductCard = ({ product, viewMode }) => {
         </button>
 
         {/* Quick Action Buttons */}
-        <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-          <div className="flex gap-2">
-            <button className="flex-1 bg-gray-800 text-white py-2 px-3 rounded text-sm hover:bg-gray-700 transition-colors font-light">
+        <div className="absolute bottom-3 left-2 right-2 sm:left-3 sm:right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="flex gap-1 sm:gap-2">
+            <button className="flex-1 bg-gray-800 text-white py-1.5 sm:py-2 px-2 sm:px-3 rounded text-xs sm:text-sm hover:bg-gray-700 transition-colors font-light">
               カート追加
             </button>
-            <button className="px-3 py-2 bg-white bg-opacity-90 text-gray-700 rounded text-sm hover:bg-opacity-100 transition-colors font-light">
+            <button className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white bg-opacity-90 text-gray-700 rounded text-xs sm:text-sm hover:bg-opacity-100 transition-colors font-light">
               詳細
             </button>
           </div>
@@ -202,23 +202,23 @@ const ProductCard = ({ product, viewMode }) => {
       </div>
 
       {/* Product Info */}
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <div className="flex items-start justify-between mb-2">
-          <div className="flex-1">
-            <h3 className="text-sm font-light text-gray-800 mb-1 line-clamp-1">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-sm sm:text-base font-light text-gray-800 mb-1 line-clamp-1 truncate">
               {product.name}
             </h3>
-            <p className="text-xs text-gray-500 font-light">
+            <p className="text-xs sm:text-sm text-gray-500 font-light">
               {product.brand}
             </p>
           </div>
           
-          <div className="text-right ml-2">
-            <div className="text-sm font-light text-gray-800">
+          <div className="text-right ml-2 flex-shrink-0">
+            <div className="text-sm sm:text-base font-light text-gray-800">
               ¥{product.price.toLocaleString()}
             </div>
             {product.originalPrice && (
-              <div className="text-xs text-gray-400 line-through font-light">
+              <div className="text-xs sm:text-sm text-gray-400 line-through font-light">
                 ¥{product.originalPrice.toLocaleString()}
               </div>
             )}

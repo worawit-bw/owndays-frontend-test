@@ -184,7 +184,7 @@ const ProductGrid = ({ filters, viewMode }) => {
       {/* Products Grid/List */}
       <div className={`mb-8 ${
         viewMode === 'grid' 
-          ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' 
+          ? 'grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4 sm:gap-6' 
           : 'space-y-4'
       }`}>
         {paginatedProducts.map((product) => (
